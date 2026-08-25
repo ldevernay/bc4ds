@@ -1,4 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-hidden="true">
-  <circle cx="16" cy="16" r="15" fill="#1f5c3f"/>
-  <path d="M9 18c0-6 5-10 12-10-1 7-6 12-12 12-1.5 0-3-.3-4-1 1-2 2.5-3.5 4-4z" fill="#c98a2c"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150px" height="150px" viewBox="0 0 150 150" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="matrix(150,0,0,150,0,0)">
+<stop offset="0.25" style="stop-color:rgb(54.509804%,66.27451%,57.254902%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(47.843137%,22.352941%,54.509804%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="matrix(150,0,0,150,0,-75)">
+<stop offset="0.25" style="stop-color:rgb(54.509804%,66.27451%,57.254902%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(47.843137%,22.352941%,54.509804%);stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="matrix(150,0,0,150,0,75)">
+<stop offset="0.25" style="stop-color:rgb(54.509804%,66.27451%,57.254902%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(47.843137%,22.352941%,54.509804%);stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<rect x="0" y="0" width="150" height="150" style="fill:url(#linear0);stroke:none;"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 150 0 C 150 -41.421875 116.421875 -75 75 -75 C 33.578125 -75 0 -41.421875 0 0 C 0 41.421875 33.578125 75 75 75 C 116.421875 75 150 41.421875 150 0 Z M 150 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 150 150 C 150 108.578125 116.421875 75 75 75 C 33.578125 75 0 108.578125 0 150 C 0 191.421875 33.578125 225 75 225 C 116.421875 225 150 191.421875 150 150 Z M 150 150 "/>
+</g>
 </svg>

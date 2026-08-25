@@ -3,7 +3,6 @@
   class="story-card"
   data-story-card
   data-tags="{{ story.tags | join: ' ' | downcase }}"
-  data-search="{{ story.title | downcase }} {{ story.company | downcase }} {{ story.summary | downcase }}"
 >
   {% if story.logo %}
     <img class="story-card__logo" src="{{ story.logo | relative_url }}" alt="{{ story.company }} logo" loading="lazy" width="120" height="40">

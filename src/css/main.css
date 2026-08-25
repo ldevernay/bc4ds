@@ -10,16 +10,10 @@
    ========================================================================== */
 
 :root {
-  /* ---------------------------------------------------------------------
-     NOTE: placeholder palette inspired by laudevsat.fr's "responsible /
-     nature" identity (green + warm neutral). Swap these hex values for
-     the exact ones from the laudevsat.fr graphic charter before launch,
-     and drop the real logo files into /assets/images/logo/.
-     --------------------------------------------------------------------- */
-  --color-bg: #faf9f5;
+  --color-bg: #fffff5;
   --color-bg-alt: #f1efe6;
   --color-surface: #ffffff;
-  --color-text: #1b2b22;
+  --color-text: #000000;
   --color-text-muted: #4c5a51;
   --color-primary: #1f5c3f;
   --color-primary-dark: #143d2a;
@@ -212,7 +206,7 @@ a:hover {
   font-size: 1.1rem;
 }
 
-/* ---------- Filters / search ---------- */
+/* ---------- Filters ---------- */
 
 .filters {
   padding-block: var(--space-4);
@@ -225,24 +219,6 @@ a:hover {
   gap: var(--space-3);
   align-items: flex-end;
   justify-content: space-between;
-}
-
-.search-field label,
-.tag-filters legend {
-  display: block;
-  font-weight: 600;
-  font-size: 0.85rem;
-  margin-bottom: var(--space-1);
-}
-
-.search-field input[type="search"] {
-  font: inherit;
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  min-width: 16rem;
-  background: var(--color-surface);
-  color: var(--color-text);
 }
 
 .tag-filters {

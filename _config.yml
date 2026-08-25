@@ -7,11 +7,10 @@ title: "Business Case for Digital Sustainability"
 tagline: "Real-world evidence that digital sustainability pays off"
 description: >-
   A collection of real-world stories showing the measurable and
-  non-measurable benefits of digital sustainability (eco-design,
-  performance, accessibility) for organisations, their users and
+  non-measurable benefits of digital sustainability for organisations, their users and
   the planet. Inspired by wpostats.com.
 
-url: "https://sustainability.laudevsat.fr"
+url: "https://bc4ds.laudevsat.fr/"
 baseurl: ""
 lang: en
 
@@ -20,7 +19,7 @@ lang: en
 parent_site:
   name: "laudevsat.fr"
   url: "https://laudevsat.fr"
-repository: "https://github.com/ldevernay/sustainability-business-case"
+repository: "https://github.com/ldevernay/bc4ds"
 
 author:
   name: "Laurent Devernay Satyagraha"

@@ -18,7 +18,7 @@ Built by [laudevsat.fr](https://laudevsat.fr).
   be as light and accessible as possible: system font stack, semantic HTML,
   AA/AAA colour contrast, `prefers-reduced-motion` and dark-mode support,
   a skip link, and full keyboard/focus support.
-- **Client-side filtering & search**, entirely local — no autocomplete, no
+- **Client-side filtering**, entirely local — no
   network calls, no external service. It just shows/hides the
   server-rendered cards already in the page.
 
@@ -97,7 +97,7 @@ launch:
 
 ## Pages
 
-- `/` — homepage, story cards grid with tag filters and search.
+- `/` — homepage, story cards grid with tag filters.
 - `/business-case/` — the classic eco-design business case (cost, UX,
   compliance, resilience, brand, environmental impact).
 - `/stories/<slug>/` — one page per story.

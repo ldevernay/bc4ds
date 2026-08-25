@@ -2,11 +2,10 @@
  * Business Case for Digital Sustainability — homepage filtering.
  *
  * Deliberately dependency-free and lightweight:
- * - No autocomplete, no network requests, no third-party library.
+ * - No network requests, no third-party library.
  * - Filters the story cards that are already rendered server-side by
  *   Jekyll, so the page works (minus filtering) even if JS fails to load.
- * - Tag buttons use OR logic within the tag set, combined with an AND
- *   against the free-text search.
+ * - Tag buttons use OR logic within the tag set
  */
 (function () {
   "use strict";
@@ -17,7 +16,6 @@
   var cards = Array.prototype.slice.call(grid.querySelectorAll("[data-story-card]"));
   var tagButtons = Array.prototype.slice.call(document.querySelectorAll("[data-tag-button]"));
   var resetButton = document.querySelector("[data-tag-reset]");
-  var searchInput = document.querySelector("[data-story-search]");
   var statusEl = document.querySelector("[data-filter-status]");
   var noResultsEl = document.querySelector("[data-no-results]");
 
@@ -36,18 +34,11 @@
     return false;
   }
 
-  function cardMatchesSearch(card, query) {
-    if (!query) return true;
-    var haystack = normalise(card.getAttribute("data-search"));
-    return haystack.indexOf(query) !== -1;
-  }
-
   function applyFilters() {
-    var query = normalise(searchInput ? searchInput.value : "");
     var visibleCount = 0;
 
     cards.forEach(function (card) {
-      var visible = cardMatchesTags(card) && cardMatchesSearch(card, query);
+      var visible = cardMatchesTags(card);
       card.hidden = !visible;
       if (visible) visibleCount += 1;
     });
@@ -87,16 +78,8 @@
       tagButtons.forEach(function (button) {
         button.setAttribute("aria-pressed", "false");
       });
-      if (searchInput) searchInput.value = "";
       applyFilters();
     });
   }
-
-  if (searchInput) {
-    // Plain "input" listener — no autocomplete/suggestions, no debounce
-    // needed since filtering is a cheap client-side DOM operation.
-    searchInput.addEventListener("input", applyFilters);
-  }
-
   applyFilters();
 })();
