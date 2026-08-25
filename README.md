@@ -1,10 +1,10 @@
 # Business Case for Digital Sustainability
 
-Static site (Jekyll + Parcel) collecting real-world "story" cards about the
+Static site (Jekyll + Parcel) collecting real-world stories about the
 measurable and non-measurable benefits of digital sustainability —
 inspired by [wpostats.com](https://wpostats.com/).
 
-Live at: **sustainability.laudevsat.fr** (once deployed)
+Live at: **bc4ds.laudevsat.fr** 
 Built by [laudevsat.fr](https://laudevsat.fr).
 
 ## Stack & principles
@@ -51,10 +51,10 @@ logo: /assets/images/logos/company.svg
 summary: "One or two sentences shown on the homepage card."
 key_metric: "-42%"
 key_metric_label: "what the number refers to"
-tags: [performance, images, cost-savings]
+tags: [performance, images, cost-savings] # used for filtering
 date: 2026-04-01
-source_url: "https://example.com/original-source"   # optional
-source_name: "Publication name"                       # optional
+source_url: "https://example.com/original-source"   # optional but highly recommended
+source_name: "Publication name"                       # optional but highly recommended
 ---
 
 ## Key figures
@@ -70,9 +70,6 @@ and non-measurable gains, as described in the brief.
 
 Drop the corresponding logo SVG/PNG into `assets/images/logos/`.
 
-The four stories currently in `_stories/` are **fictitious placeholder
-examples** — replace them with real cases before launch.
-
 ## Tags & filtering
 
 Tags are free-form: just add any string to a story's `tags:` list. The
@@ -84,17 +81,6 @@ renders a filter button for each — no separate configuration needed.
 `feed.xml` is a hand-written Liquid template (no plugin dependency) that
 lists all stories, newest first, at `/feed.xml`.
 
-## Branding
-
-The current palette in `src/css/main.css` (`:root` custom properties) is a
-**placeholder**, inspired by laudevsat.fr's nature/green identity. Before
-launch:
-
-1. Replace the hex values in `:root` with the exact colours from the
-   laudevsat.fr graphic charter.
-2. Replace `assets/images/site/logo.svg` and `favicon.svg` with the real
-   laudevsat.fr logo assets (an SVG is preferred to keep the page light).
-
 ## Pages
 
 - `/` — homepage, story cards grid with tag filters.
@@ -105,6 +91,4 @@ launch:
 
 ## Repository
 
-Source code: <https://github.com/ldevernay/sustainability-business-case>
-(update `repository:` in `_config.yml` once the repo exists, if the URL
-differs).
+Source code: <https://github.com/ldevernay/bc4ds>
