@@ -46,7 +46,7 @@ jobs:
         VPS_USER: ${{ secrets.VPS_USER }}
         VPS_HOST: ${{ secrets.VPS_HOST }}
         VPS_PORT: ${{ secrets.VPS_PORT }}
-        VPS_PATH: /var/www/html/
+        VPS_PATH: /var/www/bc4ds/
       run: |
         # 1. Créer le dossier SSH et écrire la clé privée
         mkdir -p ~/.ssh
