@@ -34,11 +34,6 @@ jobs:
         ruby-version: 3.4
         bundler-cache: true    # Runs bundle install and caches gems automatically
    
-    - name: Setup Environment
-      run: |
-        gem install jekyll bundler
-        bundle install
-         
     - name: Build
       run: npm run build 
 
