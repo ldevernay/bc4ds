@@ -57,7 +57,6 @@ jobs:
         # On utilise -p pour le port personnalisé
         ssh-keyscan -H -p "$VPS_PORT" "$VPS_HOST" >> ~/.ssh/known_hosts
 
-        cd _site/
         # 3. Lancer rsync avec suppression (--delete)
         # -a: archive mode (conserve les permissions, dates, etc.)
         # -v: verbose
