@@ -1,0 +1,73 @@
+# ------------------------------------------------------------------
+# Site configuration
+# Business Case for Digital Sustainability
+# ------------------------------------------------------------------
+
+title: "Business Case for Digital Sustainability"
+tagline: "Real-world evidence that digital sustainability pays off"
+description: >-
+  A collection of real-world stories showing the measurable and
+  non-measurable benefits of digital sustainability (eco-design,
+  performance, accessibility) for organisations, their users and
+  the planet. Inspired by wpostats.com.
+
+url: "https://sustainability.laudevsat.fr"
+baseurl: ""
+lang: en
+
+# Parent site & source repository, shown in the footer.
+# Update `repository` as soon as the GitHub repo is created.
+parent_site:
+  name: "laudevsat.fr"
+  url: "https://laudevsat.fr"
+repository: "https://github.com/ldevernay/sustainability-business-case"
+
+author:
+  name: "Laurent Devernay Satyagraha"
+  url: "https://laudevsat.fr"
+
+# ------------------------------------------------------------------
+# Collections
+# ------------------------------------------------------------------
+collections:
+  stories:
+    output: true
+    permalink: /stories/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "stories"
+    values:
+      layout: "story"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# ------------------------------------------------------------------
+# Build
+# ------------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+exclude:
+  - src
+  - package.json
+  - package-lock.json
+  - node_modules
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# assets/ is copied to _site/ as-is by Jekyll, which is where Parcel
+# writes its optimised, production-ready CSS/JS (see package.json).
+keep_files:
+  - assets

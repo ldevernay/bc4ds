@@ -1,0 +1,47 @@
+{% assign all_tags = "" | split: "" %}
+{% for story in site.stories %}
+  {% for tag in story.tags %}
+    {% assign all_tags = all_tags | push: tag %}
+  {% endfor %}
+{% endfor %}
+{% assign all_tags = all_tags | uniq | sort %}
+
+<section class="filters" aria-label="Filter stories">
+  <div class="wrapper filters__row">
+    <fieldset class="tag-filters">
+      <legend>Filter by tag</legend>
+      <ul class="tag-filters__list">
+        <li>
+          <button type="button" class="tag-button is-reset" data-tag-reset>
+            Reset filters
+          </button>
+        </li>
+        {% for tag in all_tags %}
+          <li>
+            <button
+              type="button"
+              class="tag-button"
+              data-tag-button="{{ tag | downcase }}"
+              aria-pressed="false"
+            >
+              #{{ tag }}
+            </button>
+          </li>
+        {% endfor %}
+      </ul>
+    </fieldset>
+
+    <div class="search-field">
+      <label for="story-search">Search stories</label>
+      <input
+        type="search"
+        id="story-search"
+        data-story-search
+        autocomplete="off"
+        placeholder="e.g. hosting, images, checkout…"
+      >
+    </div>
+  </div>
+
+  <p class="wrapper filters__status" data-filter-status role="status"></p>
+</section>

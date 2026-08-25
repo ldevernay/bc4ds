@@ -1,0 +1,21 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby
+.bundle/
+vendor/
+
+# Node / Parcel
+node_modules/
+.parcel-cache/
+assets/css/*.css
+assets/js/*.js
+!assets/css/.gitkeep
+!assets/js/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

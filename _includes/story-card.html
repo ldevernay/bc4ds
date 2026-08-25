@@ -1,0 +1,32 @@
+{% assign story = include.story %}
+<li
+  class="story-card"
+  data-story-card
+  data-tags="{{ story.tags | join: ' ' | downcase }}"
+  data-search="{{ story.title | downcase }} {{ story.company | downcase }} {{ story.summary | downcase }}"
+>
+  {% if story.logo %}
+    <img class="story-card__logo" src="{{ story.logo | relative_url }}" alt="{{ story.company }} logo" loading="lazy" width="120" height="40">
+  {% endif %}
+
+  <p class="story-card__metric">
+    {{ story.key_metric }}
+    <span class="story-card__metric-label">{{ story.key_metric_label }}</span>
+  </p>
+
+  <h2 class="story-card__title">
+    <a href="{{ story.url | relative_url }}">{{ story.title }}</a>
+  </h2>
+
+  <p class="story-card__summary">{{ story.summary }}</p>
+
+  {% if story.tags %}
+    <ul class="story-card__tags">
+      {% for tag in story.tags %}
+        <li>#{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <span class="story-card__link" aria-hidden="true">Read the full story →</span>
+</li>

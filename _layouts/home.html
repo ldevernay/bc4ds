@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrapper">
+    <h1>{{ page.title }}</h1>
+    <p>{{ content }}</p>
+  </div>
+</section>
+
+{% include filters.html %}
+
+{% assign stories = site.stories | sort: "date" | reverse %}
+
+<div class="wrapper">
+  <ul class="story-grid" data-story-grid>
+    {% for story in stories %}
+      {% include story-card.html story=story %}
+    {% endfor %}
+  </ul>
+
+  <p class="no-results" data-no-results hidden>
+    No stories match your filters. Try resetting them or using a different search term.
+  </p>
+</div>

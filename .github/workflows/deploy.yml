@@ -1,0 +1,75 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - run: node --version
+
+    - name: Cache node modules
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-npm-
+
+    - name: Install dependencies
+      run: npm install
+
+    - name : Install Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.4
+        bundler-cache: true    # Runs bundle install and caches gems automatically
+   
+    - name: Setup Environment
+      run: |
+        gem install jekyll bundler
+        bundle install
+         
+    - name: Build
+      run: npm run build 
+
+    # - name: Build Site with Jekyll
+    #   run: JEKYLL_ENV=production bundle exec jekyll build
+      
+    - name: Configurer la clé SSH et déployer via rsync
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        VPS_USER: ${{ secrets.VPS_USER }}
+        VPS_HOST: ${{ secrets.VPS_HOST }}
+        VPS_PORT: ${{ secrets.VPS_PORT }}
+        VPS_PATH: /var/www/html/
+      run: |
+        # 1. Créer le dossier SSH et écrire la clé privée
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+        # 2. Ajouter l'hôte connu pour éviter la demande de confirmation interactive
+        # On utilise -p pour le port personnalisé
+        ssh-keyscan -H -p "$VPS_PORT" "$VPS_HOST" >> ~/.ssh/known_hosts
+
+        cd _site/
+        # 3. Lancer rsync avec suppression (--delete)
+        # -a: archive mode (conserve les permissions, dates, etc.)
+        # -v: verbose
+        # -z: compress
+        # --delete: supprime les fichiers sur le VPS qui n'existent plus localement
+        cd _site/
+        rsync -avz --delete \
+          -e "ssh -p $VPS_PORT -o StrictHostKeyChecking=no" \
+          ./ \
+          "$VPS_USER@$VPS_HOST:$VPS_PATH"

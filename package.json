@@ -1,0 +1,23 @@
+{
+  "name": "sustainability-business-case",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Business Case for Digital Sustainability — Jekyll site with Parcel-optimised assets",
+  "scripts": {
+    "build:css": "parcel build src/css/main.css --dist-dir assets/css --no-source-maps --no-content-hash",
+    "build:js": "parcel build src/js/main.js --dist-dir assets/js --no-source-maps --no-content-hash",
+    "build:assets": "npm run build:css && npm run build:js",
+    "watch:css": "parcel watch src/css/main.css --dist-dir assets/css --no-content-hash --no-hmr",
+    "watch:js": "parcel watch src/js/main.js --dist-dir assets/js --no-content-hash --no-hmr",
+    "watch:assets": "npm-run-all --parallel watch:css watch:js",
+    "jekyll:serve": "bundle exec jekyll serve --livereload",
+    "start": "npm run build:assets && npm run jekyll:serve",
+    "build": "npm run build:assets && bundle exec jekyll build",
+    "clean": "rm -rf .parcel-cache assets/css assets/js _site"
+  },
+  "devDependencies": {
+    "@parcel/config-default": "^2.12.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.12.0"
+  }
+}

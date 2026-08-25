@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="wrapper site-header__inner">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">
+      <img
+        class="site-header__logo"
+        src="{{ '/assets/images/site/logo.svg' | relative_url }}"
+        alt=""
+        width="32"
+        height="32"
+      >
+      <span class="site-header__title">
+        {{ site.title }}
+        <small>{{ site.tagline }}</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Stories</a></li>
+        <li><a href="{{ '/business-case/' | relative_url }}"{% if page.url == '/business-case/' %} aria-current="page"{% endif %}>The business case</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

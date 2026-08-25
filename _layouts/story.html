@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<article class="story">
+  <div class="wrapper">
+    <a class="back-link" href="{{ '/' | relative_url }}">← All stories</a>
+
+    <header class="story__header">
+      {% if page.logo %}
+        <img class="story__logo" src="{{ page.logo | relative_url }}" alt="{{ page.company }} logo" width="140" height="48">
+      {% endif %}
+
+      <p class="story__metric">
+        {{ page.key_metric }}
+        <span class="story__metric-label">{{ page.key_metric_label }}</span>
+      </p>
+
+      <h1 class="story__title">{{ page.title }}</h1>
+
+      {% if page.company %}<p>{{ page.company }}{% if page.sector %} · {{ page.sector }}{% endif %}</p>{% endif %}
+
+      {% if page.tags %}
+        <ul class="story__tags">
+          {% for tag in page.tags %}
+            <li><a href="{{ '/#' | relative_url }}" data-tag-link>#{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </header>
+
+    <div class="story__body">
+      {{ content }}
+    </div>
+
+    {% if page.source_url %}
+      <p class="story__source">
+        Source: <a href="{{ page.source_url }}">{{ page.source_name | default: page.source_url }}</a>
+      </p>
+    {% endif %}
+  </div>
+</article>
