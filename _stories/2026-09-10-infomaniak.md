@@ -6,7 +6,7 @@ logo: /assets/images/logos/infomaniak.svg
 summary: "Mutualizing for simplicity and scaling"
 key_metric: "-99,93%"
 key_metric_label: "Kubernetes pods"
-tags: [Kubernetes Infrastructure]
+tags: [kubernetes, infrastructure]
 date: 2026-09-10
 source_url: "https://news.infomaniak.com/en/case-study-eco-design/"
 source_name: "Eco-design and technical debt: how we replaced horizontal scaling with a redesign that is 100x more efficient"

@@ -6,7 +6,7 @@ logo: /assets/images/logos/home-exhange.svg
 summary: "Coaching through the Digital Sustainable Challenge 2024"
 key_metric: "-36%"
 key_metric_label: "SAV calls"
-tags: [CO2 calls]
+tags: [CO2, calls]
 date: 2026-09-10
 source_url: ""
 source_name: "Temesis"

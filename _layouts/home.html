@@ -13,7 +13,7 @@ layout: default
 {% assign stories = site.stories | sort: "date" | reverse %}
 
 <div class="wrapper">
-  <ul class="story-grid" data-story-grid>
+  <ul class="story-grid" data-story-grid data-page-size="9">
     {% for story in stories %}
       {% include story-card.html story=story %}
     {% endfor %}
@@ -22,4 +22,6 @@ layout: default
   <p class="no-results" data-no-results hidden>
     No stories match your filters. Try resetting them.
   </p>
+
+  <nav class="pagination" data-pagination aria-label="Stories pages" hidden></nav>
 </div>

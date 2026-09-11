@@ -327,6 +327,10 @@ a:hover {
   position: relative;
 }
 
+.story-card[hidden] {
+  display: none;
+}
+
 .story-card__title a:hover {
   color: var(--color-primary-dark);
   text-decoration: underline;
@@ -371,6 +375,53 @@ a:hover {
   display: none;
 }
 
+/* ---------- Pagination ---------- */
+
+.pagination {
+  padding-bottom: var(--space-5);
+}
+
+.pagination[hidden] {
+  display: none;
+}
+
+.pagination__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__button {
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-width: 2.25rem;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.pagination__button:hover:not(:disabled) {
+  border-color: var(--color-primary);
+}
+
+.pagination__button.is-current {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.pagination__button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
 /* ---------- Story page ---------- */
 
 .story {
