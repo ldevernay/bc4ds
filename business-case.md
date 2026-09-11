@@ -54,3 +54,10 @@ Finally, the direct goal: less energy consumed, less hardware pressure (through 
 ## How to read the stories on this site
 
 Each story on the [homepage]({{ '/' | relative_url }}) highlights one measurable headline figure — a percentage, a cost, a load time — alongside softer, non-measurable gains such as team morale, user satisfaction, or reputation. Together, they aim to show that digital sustainability is not a trade-off against business performance: in most of these cases, it is what drove it.
+
+# Going further
+The ROI of digital sustainability is a growing topic and you can already find some interesting papers about it : 
+* "Méthodologie ROI-MPACT - Sobriété Numérique" from the [AGIT](https://alliancegreenit.org/) [PDF][FR] : [https://alliancegreenit.org/media/page-groupe-de-travail/roi-mpact-methodologie-lb-roi-sobriete-numerique-agit.pdf](https://alliancegreenit.org/media/page-groupe-de-travail/roi-mpact-methodologie-lb-roi-sobriete-numerique-agit.pdf)
+* [Boavizta](https://boavizta.org/en) is also working on this :
+    * [Sustainable IT, What metrics and ressources are needed to deliver a compelling return on investment?](https://boavizta.org/en/blog/sustainable-it-metrics-ressources-return-on-investment)
+    * [Indicators for piloting a Responsible Digital approach](https://boavizta.org/en/indicateurs-nr)
