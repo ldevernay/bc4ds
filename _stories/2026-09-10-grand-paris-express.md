@@ -8,7 +8,7 @@ key_metric: "-95%"
 key_metric_label: "page weight"
 tags: [CO2]
 date: 2026-09-10
-source_url: "https://www.linkedin.com/posts/ekwateur_golden-award-aux-apidays-ekwateur-red%C3%A9finit-activity-7140295265718038529-O-RB/"
+source_url: "https://www.temesis.com/"
 source_name: "Temesis"
 ---
 
