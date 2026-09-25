@@ -6,7 +6,7 @@ logo: /assets/images/logos/airfrance.webp
 summary: "Adding digital sobriety to the Service Center Test"
 key_metric: "-11%"
 key_metric_label: "journey time"
-tags: [CO2, CICD]
+tags: [co2, cicd]
 date: 2026-08-23
 source_url: "https://greenspector.com/en/resources/case-studies/air-france-app-testing/"
 source_name: "[Greenspector case study] Air France: integrating green testing into application quality"

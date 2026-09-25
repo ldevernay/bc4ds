@@ -6,7 +6,7 @@ logo: /assets/images/logos/euromaster.svg
 summary: "Coaching through the Digital Sustainable Challenge 2020"
 key_metric: "-42000"
 key_metric_label: "Requests"
-tags: [COR, requests, water]
+tags: [co2, requests, water]
 date: 2026-09-10
 source_url: "https://drive.google.com/file/d/14Noa4YeXo6URGmSc6RosmLmwvzsGr5ai/view"
 source_name: "Sustainable Digital Challenge"

@@ -6,7 +6,7 @@ logo: /assets/images/logos/ela_logo.jpg
 summary: "Conducting an LCA to identify improvements"
 key_metric: "-60%"
 key_metric_label: "depletion of natural resources"
-tags: [LCA, IoT]
+tags: [lca, iot]
 date: 2026-09-24
 source_url: "https://librairie.ademe.fr/industrie-et-production-durable/5768-ela-innovation-reduction-des-impacts-environnementaux-d-un-service-numerique-operation-greenconcept-montpellier-34.html"
 source_name: "GreenConcept - ADEME"

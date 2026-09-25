@@ -6,7 +6,7 @@ logo: /assets/images/logos/bouygues-telecom.svg
 summary: "Integrating sustainability in CI/CD to track changes"
 key_metric: "-36%"
 key_metric_label: "GHG emissions"
-tags: [CO2, CICD]
+tags: [co2, cicd]
 date: 2026-08-23
 source_url: "https://greenspector.com/en/resources/case-studies/bouygues-telecom-mobile-digital-sobriety/"
 source_name: "[Greenspector case study] Bouygues Telecom obtains the Digital Efficiency Certificate"

@@ -6,7 +6,7 @@ logo: /assets/images/logos/grand_paris_express.webp
 summary: "Involving everyone on the ecodesign"
 key_metric: "-95%"
 key_metric_label: "page weight"
-tags: [CO2]
+tags: [co2]
 date: 2026-09-10
 source_url: "https://www.temesis.com/"
 source_name: "Temesis"

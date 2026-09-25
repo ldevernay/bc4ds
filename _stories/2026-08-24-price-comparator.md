@@ -6,7 +6,7 @@ logo: /assets/images/logos/price_comparator.webp
 summary: "Assessing and reducing environmental impacts through an LCA"
 key_metric: "-75%"
 key_metric_label: "environmental impacts"
-tags: [LCA]
+tags: [lca]
 date: 2026-08-24
 source_url: "https://www.eco-conception.fr/data/sources/users/2242/greenconcept-reduction-impacts-service-numerique.pdf"
 source_name: "[GreenConcept] Reducing the environmental impacts of a digital service [PDF][FR]"

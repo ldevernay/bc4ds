@@ -6,7 +6,7 @@ logo: /assets/images/logos/videomenthe.webp
 summary: "Conducting an LCA on a video management solution"
 key_metric: "-75%"
 key_metric_label: "depletion of natural resources"
-tags: [LCA, video]
+tags: [lca, video]
 date: 2026-09-24
 source_url: "https://www.herault.cci.fr/vous-etes/dirigeant-tpe-pme/maitriser-mon-impact-social-et-environnemental/greenconcept-comment"
 source_name: "GreenConcept - ADEME"
